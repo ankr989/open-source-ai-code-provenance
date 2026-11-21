@@ -1,0 +1,33 @@
+schema_version: "0.1-example"
+predicate_type: example.ai-assistance/v0.1
+subject:
+  kind: source-patch
+  digest: "sha256:<reviewed patch digest>"
+  repository: "<repository identifier>"
+  base_commit: "<immutable commit>"
+assistance:
+  tool: "<tool and version if known>"
+  model_identifier: "<provider/model/version if exposed; otherwise unknown>"
+  interaction_retention: redacted-or-not-retained
+  changed_paths:
+    - "src/example.py"
+human_review:
+  reviewer_role: maintainer
+  decision: approved-or-held
+  policy_version: "<policy digest/version>"
+evidence:
+  - kind: test-report
+    digest: "sha256:<digest>"
+  - kind: security-check-report
+    digest: "sha256:<digest>"
+unknowns:
+  - training-data provenance is not established
+  - correctness and license clearance are separate decisions
+envelope:
+  format: DSSE-or-project-chosen-envelope
+  signer_identity: "<expected identity>"
+  signature: "<not included in this unsigned example>"
+privacy:
+  contains_secrets: false
+  contains_full_prompts: false
+  note: hashes of low-entropy sensitive text can still leak; do not include them

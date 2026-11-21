@@ -1,0 +1,124 @@
+{
+  "schema_version": "1.0",
+  "profile": 10,
+  "repository": "open-source-ai-code-provenance",
+  "reviewed_on": "2026-11-21",
+  "comparison_axes": [
+    "Standard/project",
+    "Subject",
+    "Provides",
+    "Use for AI-assisted code",
+    "Does not establish"
+  ],
+  "entries": [
+    {
+      "name": "SLSA Provenance",
+      "role_or_focus": "build artifact",
+      "url": "https://slsa.dev/spec/v1.0/provenance",
+      "supported_claim": "Build process and materials in an attestation predicate.",
+      "best_use": "Bind reviewed source and build inputs to an artifact.",
+      "important_boundary": "Correctness of generated code.",
+      "claim_status": {
+        "supported_claim": "source-backed",
+        "best_use": "author-recommendation",
+        "important_boundary": "author-analysis"
+      }
+    },
+    {
+      "name": "in-toto",
+      "role_or_focus": "software supply-chain steps",
+      "url": "https://github.com/in-toto/in-toto",
+      "supported_claim": "Signed metadata describing steps, materials, and products.",
+      "best_use": "Record review/generation steps in a larger layout.",
+      "important_boundary": "Truth of unverified claims inside metadata.",
+      "claim_status": {
+        "supported_claim": "source-backed",
+        "best_use": "author-recommendation",
+        "important_boundary": "author-analysis"
+      }
+    },
+    {
+      "name": "Sigstore Cosign",
+      "role_or_focus": "artifacts and attestations",
+      "url": "https://github.com/sigstore/cosign",
+      "supported_claim": "Signing and verification for containers, blobs, and attestations.",
+      "best_use": "Distribute and verify a provenance statement.",
+      "important_boundary": "The semantic quality of the predicate.",
+      "claim_status": {
+        "supported_claim": "source-backed",
+        "best_use": "author-recommendation",
+        "important_boundary": "author-analysis"
+      }
+    },
+    {
+      "name": "SPDX",
+      "role_or_focus": "software/package metadata",
+      "url": "https://spdx.dev/specifications/",
+      "supported_claim": "Standardized SBOM and licensing-related information.",
+      "best_use": "Record packages/files and license conclusions around a change.",
+      "important_boundary": "How code was generated unless an extension/profile states it.",
+      "claim_status": {
+        "supported_claim": "source-backed",
+        "best_use": "author-recommendation",
+        "important_boundary": "author-analysis"
+      }
+    },
+    {
+      "name": "CycloneDX",
+      "role_or_focus": "component and service BOMs",
+      "url": "https://cyclonedx.org/specification/overview/",
+      "supported_claim": "SBOM/OBOM/VEX-related component data.",
+      "best_use": "Track dependencies introduced by an assisted patch.",
+      "important_boundary": "Prompt history or human review.",
+      "claim_status": {
+        "supported_claim": "source-backed",
+        "best_use": "author-recommendation",
+        "important_boundary": "author-analysis"
+      }
+    },
+    {
+      "name": "DSSE",
+      "role_or_focus": "signed statement envelope",
+      "url": "https://github.com/secure-systems-lab/dsse",
+      "supported_claim": "A signature envelope designed for arbitrary typed payloads.",
+      "best_use": "Protect a custom AI-assistance statement while retaining its type.",
+      "important_boundary": "That the payload schema is meaningful or sufficient.",
+      "claim_status": {
+        "supported_claim": "source-backed",
+        "best_use": "author-recommendation",
+        "important_boundary": "author-analysis"
+      }
+    },
+    {
+      "name": "C2PA",
+      "role_or_focus": "content provenance",
+      "url": "https://spec.c2pa.org/specifications/specifications/2.2/index.html",
+      "supported_claim": "Signed manifests and assertions for digital content.",
+      "best_use": "Relevant when code projects also publish AI-assisted media/assets.",
+      "important_boundary": "Software build provenance by itself.",
+      "claim_status": {
+        "supported_claim": "source-backed",
+        "best_use": "author-recommendation",
+        "important_boundary": "author-analysis"
+      }
+    },
+    {
+      "name": "OpenSSF Scorecard",
+      "role_or_focus": "repository practice signals",
+      "url": "https://github.com/ossf/scorecard",
+      "supported_claim": "Automated checks of repository security practices.",
+      "best_use": "Add repository posture context to dependency provenance review.",
+      "important_boundary": "Provenance of a particular code block.",
+      "claim_status": {
+        "supported_claim": "source-backed",
+        "best_use": "author-recommendation",
+        "important_boundary": "author-analysis"
+      }
+    }
+  ],
+  "field_provenance": {
+    "supported_claim": "source-backed at the cited URL, subject to the recorded review date/version",
+    "best_use": "author recommendation; requires local validation",
+    "important_boundary": "author analysis unless the linked source explicitly states it"
+  }
+}

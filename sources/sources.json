@@ -1,0 +1,86 @@
+{
+  "schema_version": "1.0",
+  "reviewed_on": "2026-11-21",
+  "sources": [
+    {
+      "title": "SLSA Provenance",
+      "url": "https://slsa.dev/spec/v1.0/provenance",
+      "type": "official_specification",
+      "supports": "Build process and materials in an attestation predicate.",
+      "authority": "specification maintainer",
+      "version_or_date": "v1.0",
+      "claim_scope": "Build process and materials in an attestation predicate.",
+      "does_not_support": "This source alone does not validate this guide's cross-project recommendation, local result, interoperability, or safety sufficiency."
+    },
+    {
+      "title": "in-toto",
+      "url": "https://github.com/in-toto/in-toto",
+      "type": "upstream_repository",
+      "supports": "Signed metadata describing steps, materials, and products.",
+      "authority": "upstream project maintainers",
+      "version_or_date": "moving upstream; reviewed 2026-11-21",
+      "claim_scope": "Signed metadata describing steps, materials, and products.",
+      "does_not_support": "This source alone does not validate this guide's cross-project recommendation, local result, interoperability, or safety sufficiency."
+    },
+    {
+      "title": "Sigstore Cosign",
+      "url": "https://github.com/sigstore/cosign",
+      "type": "upstream_repository",
+      "supports": "Signing and verification for containers, blobs, and attestations.",
+      "authority": "upstream project maintainers",
+      "version_or_date": "moving upstream; reviewed 2026-11-21",
+      "claim_scope": "Signing and verification for containers, blobs, and attestations.",
+      "does_not_support": "This source alone does not validate this guide's cross-project recommendation, local result, interoperability, or safety sufficiency."
+    },
+    {
+      "title": "SPDX",
+      "url": "https://spdx.dev/specifications/",
+      "type": "official_specification",
+      "supports": "Standardized SBOM and licensing-related information.",
+      "authority": "specification maintainer",
+      "version_or_date": "moving upstream; reviewed 2026-11-21",
+      "claim_scope": "Standardized SBOM and licensing-related information.",
+      "does_not_support": "This source alone does not validate this guide's cross-project recommendation, local result, interoperability, or safety sufficiency."
+    },
+    {
+      "title": "CycloneDX",
+      "url": "https://cyclonedx.org/specification/overview/",
+      "type": "official_specification",
+      "supports": "SBOM/OBOM/VEX-related component data.",
+      "authority": "specification maintainer",
+      "version_or_date": "moving upstream; reviewed 2026-11-21",
+      "claim_scope": "SBOM/OBOM/VEX-related component data.",
+      "does_not_support": "This source alone does not validate this guide's cross-project recommendation, local result, interoperability, or safety sufficiency."
+    },
+    {
+      "title": "DSSE",
+      "url": "https://github.com/secure-systems-lab/dsse",
+      "type": "upstream_repository",
+      "supports": "A signature envelope designed for arbitrary typed payloads.",
+      "authority": "upstream project maintainers",
+      "version_or_date": "moving upstream; reviewed 2026-11-21",
+      "claim_scope": "A signature envelope designed for arbitrary typed payloads.",
+      "does_not_support": "This source alone does not validate this guide's cross-project recommendation, local result, interoperability, or safety sufficiency."
+    },
+    {
+      "title": "C2PA",
+      "url": "https://spec.c2pa.org/specifications/specifications/2.2/index.html",
+      "type": "official_specification",
+      "supports": "Signed manifests and assertions for digital content.",
+      "authority": "specification maintainer",
+      "version_or_date": "2.2",
+      "claim_scope": "Signed manifests and assertions for digital content.",
+      "does_not_support": "This source alone does not validate this guide's cross-project recommendation, local result, interoperability, or safety sufficiency."
+    },
+    {
+      "title": "OpenSSF Scorecard",
+      "url": "https://github.com/ossf/scorecard",
+      "type": "upstream_repository",
+      "supports": "Automated checks of repository security practices.",
+      "authority": "upstream project maintainers",
+      "version_or_date": "moving upstream; reviewed 2026-11-21",
+      "claim_scope": "Automated checks of repository security practices.",
+      "does_not_support": "This source alone does not validate this guide's cross-project recommendation, local result, interoperability, or safety sufficiency."
+    }
+  ]
+}
