@@ -1,5 +1,10 @@
 # AI-Assisted Code Provenance and Attestations
 
+
+> **Decision:** Use this guide to record who asserted what about an AI-assisted code artifact while keeping correctness, originality, licensing, and security as separate reviews; skip it if you expect provenance alone to prove trustworthiness.
+>
+> **For:** maintainers, supply-chain engineers, and compliance reviewers  ·  **Not for:** teams seeking automatic proof that generated code is safe or original
+
 Provenance can answer **who asserted what about which artifact**. It cannot prove that generated code is correct, original, licensed, secure, or even accurately described.
 
 This guide proposes a minimal evidence envelope for AI-assisted changes and shows how it can sit beside established software-supply-chain formats. The AI-specific mapping is an **author design for review**, not a claim that SLSA, SPDX, or in-toto standardizes prompt disclosure.
@@ -88,6 +93,14 @@ Version the predicate on semantic changes. Preserve old schemas and fixtures. Re
 
 Sources: [`sources/sources.json`](sources/sources.json).
 
+## Adjacent guides
+
+- [ai-patch-review-playbook](https://github.com/ColomboEA/ai-patch-review-playbook) — Use it when the provenance record accompanies the practical review of an AI-generated diff.
+- [dependency-agent-safety-gates](https://github.com/WILLIAMSTONSA/dependency-agent-safety-gates) — Use it when the change also updates dependencies and needs an independent gate state.
+- [ai-research-reproducibility](https://github.com/Lindenberg668/ai-research-reproducibility) — Use it for a broader claim-to-input-to-environment packet around experimental work.
+
 ## License
 
 Original guide and example schema are available under CC BY 4.0. Linked standards retain their terms.
+
+If this saved you a decision, star the repo — it is how the next reader finds it.
